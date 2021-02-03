@@ -7,21 +7,45 @@ const arquivo = Ncdm
 
 const NCDM = () => { 
 
-const [data,setValor] = useState(arquivo)
+const [resultado1, setResultado1] = useState ()
+const [resultado2, setResultado2] = useState ()
 
-const [entrada, setEntrada] = useState()
-
-const [botao, setBotao]= useState()
-
-const [resultado, setResultado] = useState ()
-
-function comparar(){
-
+function Hand(e){
   
+  const filtrar = arquivo.filter(a=>{
+   return a.NCDM == e.toUpperCase()
+  })
+
+  try{
+    setResultado1(` ${filtrar[0].NCDM}`)
+    setResultado2(`   ${filtrar[0].__EMPTY_1}
+
+    ${filtrar[0].__EMPTY_2}`)
+  
+  }catch(err){
+    setResultado1('Valor digitado incorreto')
+    setResultado2('O valor que você digitou não consta no banco de dados')
+
+
+  }
+
 }
 
-
-
+const createTwoButtonAlert = () =>
+    Alert.alert(
+       resultado1,
+       resultado2,
+      
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        { text: "OK", onPress: () => console.log("OK Pressed") }
+      ],
+      { cancelable: false }
+    );
 
 return( 
     <View style={{ flex:1 }}>
@@ -31,15 +55,14 @@ return(
 <Text style={{ height: 50, color: "white" }}>CBTC</Text> 
         </View>
         <View style={{backgroundColor: "black", height:5}}></View>
-<Text style={{ height: 50, color: "black", marginTop:50, textAlign:"center", fontSize:20, }}>Digite o Código do Display {entrada}</Text>  
+<Text style={{ height: 50, color: "black", marginTop:50, textAlign:"center", fontSize:20, }}>Digite o Código do Display</Text>  
         <View style={{ alignItems:"center", justifyContent:"center", flexDirection:"row", marginTop:30}} >
 
-        <TextInput style={{width:200,height:37, borderStyle:"solid",borderRadius:2, backgroundColor:"#CDC9C9"}} onChangeText = {e=>{
-         setEntrada(e)}}  placeholder="Digite o código "/>
+        <TextInput style={{width:200,height:37, borderStyle:"solid",borderRadius:2, backgroundColor:"#CDC9C9"}} onChangeText ={Hand}  placeholder="Digite o código "/>
         <Button 
                  
                  
-                  onPress= {()=>{alert('nada')}}
+                  onPress= {createTwoButtonAlert}
                   title="Pesquisar"
                   color= "#ee3338"
               
