@@ -17,10 +17,10 @@ function Hand(e){
   })
 
   try{
-    setResultado1(` ${filtrar[0].NCDM}`)
-    setResultado2(`   ${filtrar[0].__EMPTY_1}
+    setResultado1(`Falha ${filtrar[0].NCDM}`)
+    setResultado2(`${filtrar[0].__EMPTY_1}
 
-    ${filtrar[0].__EMPTY_2}`)
+${filtrar[0].__EMPTY_2}`)
   
   }catch(err){
     setResultado1('Valor digitado incorreto')
@@ -49,13 +49,14 @@ const createTwoButtonAlert = () =>
 
 return( 
     <View style={{ flex:1 }}>
+      <View style={{backgroundColor: "black", height:2}}></View>
         <View style={{backgroundColor:"#ee3338", height:50,flexDirection:"row", justifyContent:'space-around', marginTop:0, padding:13, }}>
           <Text style={{ height: 50, color: "white" }}>CPTM</Text> 
           <Text style={{ height: 100, color: "white" }}>SINALIZAÇÃO</Text> 
-<Text style={{ height: 50, color: "white" }}>CBTC</Text> 
+          <Text style={{ height: 50, color: "white" }}>CBTC</Text> 
         </View>
-        <View style={{backgroundColor: "black", height:5}}></View>
-<Text style={{ height: 50, color: "black", marginTop:50, textAlign:"center", fontSize:20, }}>Digite o Código do Display</Text>  
+        <View style={{backgroundColor: "black", height:2.5}}></View>
+<Text style={{ height: 50, color: "black", marginTop:50, textAlign:"center", fontSize:25, }}>Digite o Código do Display</Text>  
         <View style={{ alignItems:"center", justifyContent:"center", flexDirection:"row", marginTop:30}} >
 
         <TextInput style={{width:200,height:37, borderStyle:"solid",borderRadius:2, backgroundColor:"#CDC9C9"}} onChangeText ={Hand}  placeholder="Digite o código "/>
