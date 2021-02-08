@@ -63,7 +63,7 @@ ${filtrar[0].__EMPTY_2}`)
             <Text style={{ height: 50, color: "white" }}>CBTC</Text> 
           </View>
           <View style={{backgroundColor: "black", height:2.5}}></View>
-  <Text style={{ height: 50, color: "black", marginTop:50, textAlign:"center", fontSize:25, }}>Digite o Binário do Display</Text>  
+  <Text style={{ height: 50, color: "black", marginTop:50, textAlign:"center", fontSize:20, }}>Digite o Binário do Display</Text>  
           <View style={{ alignItems:"center", justifyContent:"center", flexDirection:"row", marginTop:30}} >
   
           <TextInput style={{width:200,height:37, borderStyle:"solid",borderRadius:2, backgroundColor:"#CDC9C9"}} onChangeText ={Hand}  placeholder="Digite o código" keyboardType='numeric' />
