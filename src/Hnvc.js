@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {  Text, View, Button, TextInput, Alert } from 'react-native';
+import {  Text, View, Button, TextInput, Alert, Image } from 'react-native';
 import Hnvc from '../arquivos/hnvc'
 
 const arquivo = Hnvc
@@ -58,15 +58,16 @@ ${filtrar[0].__EMPTY_2}`)
       <View style={{ flex:1 }}>
         <View style={{backgroundColor: "black", height:2}}></View>
           <View style={{backgroundColor:"#ee3338", height:50,flexDirection:"row", justifyContent:'space-around', marginTop:0, padding:13, }}>
-            <Text style={{ height: 50, color: "white" }}>CPTM</Text> 
+            <Image style={{width:"13%", height:"100%"}} source={require('../assets/icon.png')}/> 
             <Text style={{ height: 100, color: "white" }}>SINALIZAÇÃO</Text> 
             <Text style={{ height: 50, color: "white" }}>CBTC</Text> 
           </View>
           <View style={{backgroundColor: "black", height:2.5}}></View>
-  <Text style={{ height: 50, color: "black", marginTop:50, textAlign:"center", fontSize:20, }}>Digite o Binário do Display</Text>  
+          <Text style={{ height: 50, color: "black", marginTop:50, textAlign:"center", fontSize:25, }}>Digite o Binário do Display</Text> 
+          <Text style={{ height: 50, color: "black", textAlign:"center", fontSize:25, }}>(HNVC)</Text> 
           <View style={{ alignItems:"center", justifyContent:"center", flexDirection:"row", marginTop:30}} >
   
-          <TextInput style={{width:200,height:37, borderStyle:"solid",borderRadius:2, backgroundColor:"#CDC9C9"}} onChangeText ={Hand}  placeholder="Digite o código" keyboardType='numeric' />
+          <TextInput style={{width:200,height:37, borderStyle:"solid",borderRadius:2, backgroundColor:"#CDC9C9", padding:5}} onChangeText ={Hand}  placeholder="Digite o código" keyboardType='numeric' />
           <Button 
                    
                    

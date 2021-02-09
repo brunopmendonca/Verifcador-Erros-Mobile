@@ -19,15 +19,15 @@ export default function App() {
             
  <NavigationContainer>
    <Stack.Navigator>
-     <Stack.Screen name= 'Home' component = {Page1}/>
-     <Stack.Screen name= 'Evtc' component = {Evtc}/>
-     <Stack.Screen name= 'Ncdm' component = {Ncdm}/>
-     <Stack.Screen name= 'Hnvc' component = {Hnvc}/>
-     <Stack.Screen name= 'Vlm' component = {Vlm}/>
-     <Stack.Screen name= 'Vlom' component = {Vlom}/>
-     <Stack.Screen name= 'Vpim' component = {Vpim}/>
-     <Stack.Screen name= 'Vrom' component = {Vrom}/>
-     <Stack.Screen name= 'Tcom' component = {Tcom}/>
+     <Stack.Screen name= 'Home' component = {Page1} options={{title:"Menu"}} />
+     <Stack.Screen name= 'Evtc' component = {Evtc} options={{title:"Voltar"}}/>
+     <Stack.Screen name= 'Ncdm' component = {Ncdm} options={{title:"Voltar"}}/>
+     <Stack.Screen name= 'Hnvc' component = {Hnvc} options={{title:"Voltar"}}/>
+     <Stack.Screen name= 'Vlm' component = {Vlm} options={{title:"Voltar"}}/>
+     <Stack.Screen name= 'Vlom' component = {Vlom} options={{title:"Voltar"}}/>
+     <Stack.Screen name= 'Vpim' component = {Vpim} options={{title:"Voltar"}}/>
+     <Stack.Screen name= 'Vrom' component = {Vrom} options={{title:"Voltar"}}/>
+     <Stack.Screen name= 'Tcom' component = {Tcom} options={{title:"Voltar"}}/>
    </Stack.Navigator>
  </NavigationContainer>
    
